@@ -1,0 +1,12 @@
+C:\Users\surendra\source\repos\UsingCodeFirst\bin\Debug\UsingCodeFirst.exe.config
+C:\Users\surendra\source\repos\UsingCodeFirst\bin\Debug\UsingCodeFirst.exe
+C:\Users\surendra\source\repos\UsingCodeFirst\bin\Debug\UsingCodeFirst.pdb
+C:\Users\surendra\source\repos\UsingCodeFirst\bin\Debug\EntityFramework.dll
+C:\Users\surendra\source\repos\UsingCodeFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\surendra\source\repos\UsingCodeFirst\bin\Debug\EntityFramework.xml
+C:\Users\surendra\source\repos\UsingCodeFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\surendra\source\repos\UsingCodeFirst\obj\Debug\UsingCodeFirst.csprojAssemblyReference.cache
+C:\Users\surendra\source\repos\UsingCodeFirst\obj\Debug\UsingCodeFirst.csproj.CoreCompileInputs.cache
+C:\Users\surendra\source\repos\UsingCodeFirst\obj\Debug\UsingCodeFirst.csproj.CopyComplete
+C:\Users\surendra\source\repos\UsingCodeFirst\obj\Debug\UsingCodeFirst.exe
+C:\Users\surendra\source\repos\UsingCodeFirst\obj\Debug\UsingCodeFirst.pdb

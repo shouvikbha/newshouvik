@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Details of Books</title>
+
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+
+        //Loading Books in a list and displaying when the document is loaded
+        $(document).ready(function () {
+            jQuery.support.cors = true;
+            $.ajax({
+                url: 'api/books',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    WriteResponses(data);
+                },
+                error: function (x, y, z) {
+                    alert(x + '\n' + y + '\n' + z);
+                }
+            });
+
+            //Displaying in a table
+            function WriteResponses(books) {
+                var strResult = "<table border=1><th>Book Id</th><th>Title</th><th>Year</th><th>Price</th><th>Genre</th>";
+                $.each(books, function (index, book) {
+                    strResult += "<tr><td>" + book.Id + "</td><td>" + book.Title + "</td><td>"
+                        + book.Year + "</td><td>" + book.Price + "</td><td>" + book.Genre + "</td></tr>";
+                });
+
+                strResult += "</table>";
+                $("#divResult").html(strResult);
+            }
+        });
+
+
+            //Search Book
+            function GetBook() {
+                jQuery.support.cors = true;
+                $.ajax({
+                    url: 'api/books/' + document.getElementById('bookid').value,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        WriteResponse(data);
+                    },
+                    error: function (x, y, z) {
+                        alert('The Book is not available in the list');
+                    }
+                });
+
+                function WriteResponse(book) {
+                    document.getElementById('bkid').innerHTML = "<h3>" + book.Id + "</h3>";
+                    document.getElementById('title').innerHTML = "<h3>" + book.Title + "</h3>";
+                    document.getElementById('year').innerHTML = "<h3>" + book.Year + "</h3>";
+                    document.getElementById('price').innerHTML = "<h3>" + book.Price + "</h3>";
+                    document.getElementById('genre').innerHTML = "<h3>" + book.Genre + "</h3>";
+
+                }
+            }
+
+        //Add book
+        function PostBook() {
+            var book = {
+                'Id': document.getElementById('newBkid').value,
+                'Title':document.getElementById('newTitle').value,
+                'Year': document.getElementById('newYear').value,
+                'Price': document.getElementById('newPrice').value,
+                'Genre': document.getElementById('newGenre').value
+            };
+            $.ajax({
+                url: 'api/books',
+                type: 'POST',
+                data: JSON.stringify(book),
+                contentType:"application/json;charset=utf-8",
+                success: function (data) {
+                    alert('Books Added Successfully');
+                    GetBooks();
+                },
+                error: function () {
+                    alert('Book not added');
+                }
+            });
+        }
+
+            function GetBooks() {
+                jQuery.support.cors = true;
+                $.ajax({
+                    url: 'api/books',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        WriteResponses(data);
+                    },
+                    error: function (x, y, z) {
+                        alert(x + '\n' + y + '\n' + z);
+                    }
+                });
+
+                //Displaying in a Table
+                function WriteResponses(books) {
+                    var strResult = "<table border=1><th>Book Id</th><th>Title</th><th>Year</th><th>Price</th><th>Genre</th>";
+                    $.each(books, function (index, book) {
+                        strResult += "<tr><td>" + book.Id + "</td><td>" + book.Title + "</td><td>"
+                            + book.Year + "</td><td>" + book.Price + "</td><td>" + book.Genre + "</td></tr>";
+                    });
+
+                    strResult += "</table>";
+                    $("#divResultNew").html(strResult);
+                }
+            }
+        
+
+        
+
+    </script>
+
+</head>
+<body>
+    <h1 style="color:aqua">LIST OF BOOKS</h1>
+    <div id="divResult" style="margin-left:15px"></div>
+
+    <div style="margin-left:15px">
+        <h1>Enter Book Id</h1>
+        <input type="text" id="bookid" />
+        <input type="button" onclick="GetBook()" value="Get Book" />
+    </div>
+
+    <div style="margin-left:15px">
+        <table>
+            <tr>
+                <td><h3>Book Id</h3></td>
+                <td><span id="bkid" /></td>
+            </tr>
+            <tr>
+                <td><h3>Title</h3></td>
+                <td><span id="title" /></td>
+            </tr>
+            <tr>
+                <td><h3>Year</h3></td>
+                <td><span id="year" /></td>
+            </tr>
+            <tr>
+                <td><h3>Price</h3></td>
+                <td><span id="price" /></td>
+            </tr>
+            <tr>
+                <td><h3>Genre</h3></td>
+                <td><span id="genre" /></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div style="margin-left:15px">
+        <h1>Add Book</h1>
+        <table>
+            <tr>
+                <td>Book Id</td>
+                <td><input type="text" id="newBkid"></td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td><input type="text" id="newTitle"></td>
+            </tr>
+            <tr>
+                <td>Year</td>
+                <td><input type="text" id="newYear"></td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td><input type="text" id="newPrice"></td>
+            </tr>
+            <tr>
+                <td>Genre</td>
+                <td><input type="text" id="newGenre"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Add Book" onclick="PostBook()" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="divResultNew" style="margin-left:15px"></div>
+</body>
+</html>

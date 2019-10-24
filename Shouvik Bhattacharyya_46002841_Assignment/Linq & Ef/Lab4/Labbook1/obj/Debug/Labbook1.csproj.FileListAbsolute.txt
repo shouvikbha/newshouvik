@@ -1,0 +1,12 @@
+C:\Users\Administrator\source\repos\EntityFrameworkLabbook1\Labbook1\bin\Debug\Labbook1.exe.config
+C:\Users\Administrator\source\repos\EntityFrameworkLabbook1\Labbook1\bin\Debug\Labbook1.exe
+C:\Users\Administrator\source\repos\EntityFrameworkLabbook1\Labbook1\bin\Debug\Labbook1.pdb
+C:\Users\Administrator\source\repos\EntityFrameworkLabbook1\Labbook1\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\source\repos\EntityFrameworkLabbook1\Labbook1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\source\repos\EntityFrameworkLabbook1\Labbook1\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\source\repos\EntityFrameworkLabbook1\Labbook1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\source\repos\EntityFrameworkLabbook1\Labbook1\obj\Debug\Labbook1.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\EntityFrameworkLabbook1\Labbook1\obj\Debug\Labbook1.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\EntityFrameworkLabbook1\Labbook1\obj\Debug\Labbook1.csproj.CopyComplete
+C:\Users\Administrator\source\repos\EntityFrameworkLabbook1\Labbook1\obj\Debug\Labbook1.exe
+C:\Users\Administrator\source\repos\EntityFrameworkLabbook1\Labbook1\obj\Debug\Labbook1.pdb

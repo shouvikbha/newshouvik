@@ -1,0 +1,7 @@
+C:\LAB\LINQBASICS\LabQues1\bin\Debug\LabQues1.exe.config
+C:\LAB\LINQBASICS\LabQues1\bin\Debug\LabQues1.exe
+C:\LAB\LINQBASICS\LabQues1\bin\Debug\LabQues1.pdb
+C:\LAB\LINQBASICS\LabQues1\obj\Debug\LabQues1.csprojAssemblyReference.cache
+C:\LAB\LINQBASICS\LabQues1\obj\Debug\LabQues1.csproj.CoreCompileInputs.cache
+C:\LAB\LINQBASICS\LabQues1\obj\Debug\LabQues1.exe
+C:\LAB\LINQBASICS\LabQues1\obj\Debug\LabQues1.pdb

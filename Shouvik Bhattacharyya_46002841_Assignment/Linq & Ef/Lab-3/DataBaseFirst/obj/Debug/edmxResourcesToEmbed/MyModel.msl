@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MusicStoreModelStoreContainer" CdmEntityContainer="MusicStoreEntities">
+    <EntitySetMapping Name="Albums">
+      <EntityTypeMapping TypeName="MusicStoreModel.Album">
+        <MappingFragment StoreEntitySet="Album">
+          <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Genre" ColumnName="Genre" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
